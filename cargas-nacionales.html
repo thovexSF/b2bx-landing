@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="assets/images/naranjo.png" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cargas Nacionales – B2B Express</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -16,12 +19,14 @@
         <img src="assets/images/blancob2b.png" alt="B2B Express" id="logo-white" />
         <img src="assets/images/naranjo.png" alt="B2B Express" id="logo-orange" />
       </a>
-      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
       <nav id="mainNav">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li class="has-dropdown"><a href="index.html#servicios">Servicios <i class="fas fa-chevron-down"></i></a>
+          <li class="has-dropdown">
+            <a href="servicios.html">Servicios <i class="fas fa-angle-down"></i></a>
             <ul class="dropdown">
+              <li><a href="servicios.html">Nuestros Servicios</a></li>
               <li><a href="cargas-nacionales.html">Cargas Nacionales</a></li>
               <li><a href="cargas-internacionales.html">Cargas Internacionales</a></li>
               <li><a href="cargas-maritimas.html">Cargas Marítimas</a></li>
@@ -33,78 +38,67 @@
             </ul>
           </li>
           <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="contacto.html" class="btn-contact">¡Contáctanos!</a></li>
+          <li><a href="contacto.html" class="nav-contacto">¡Contáctanos!</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="page-hero">
+  <div class="page-hero page-hero--dark" style="background-image: url('assets/images/cargasnacionalesheader.jpg');">
     <div class="container">
       <h1>Cargas Nacionales</h1>
       <p>Cobertura en todo Chile</p>
     </div>
   </div>
 
-  <section class="page-content section">
-    <div class="container" style="max-width:800px;">
-      <span class="section-tag">Nuestro servicio</span>
-      <h2 style="margin:12px 0 24px;">Cargas Nacionales</h2>
-      <p>Gran experiencia y cobertura. Tenemos agentes presentes en las principales ciudades de Chile y ofrecemos servicios de carga hacia y desde todo el país.</p>
-      <p>Nuestro tamaño nos permite ser ágiles y adaptar rápidamente nuestros servicios a las necesidades urgentes de nuestros clientes, ofreciendo soluciones flexibles de retiro y entrega.</p>
-      <ul style="list-style:none; margin:24px 0; display:flex; flex-direction:column; gap:12px;">
-        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#EC671D;"><i class="fas fa-check-circle"></i></span> Distribución a domicilio</li>
-        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#EC671D;"><i class="fas fa-check-circle"></i></span> Retiro y entrega de emergencia</li>
-        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#EC671D;"><i class="fas fa-check-circle"></i></span> Transporte aéreo y terrestre</li>
-        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#EC671D;"><i class="fas fa-check-circle"></i></span> Soluciones personalizadas para cargas urgentes</li>
-        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#EC671D;"><i class="fas fa-check-circle"></i></span> Agentes en las principales ciudades del país</li>
-      </ul>
-      <div style="margin-top:40px;">
-        <a href="contacto.html" class="btn-primary">Solicitar información</a>
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="service-detail-grid">
+        <div class="service-detail-text">
+          <p>Gran experiencia y cobertura. Tenemos agentes presentes en las principales ciudades de Chile y ofrecemos servicios de carga hacia y desde todo el país. B2B ofrece carga aérea y terrestre, con distribución a domicilio, servicio de entrega o retiro de emergencia. Nos especializamos en dar un servicio hecho a la medida de la emergencia de nuestros clientes.</p>
+          <ul class="service-checklist">
+        <li><span><i class="fas fa-check-circle"></i></span> Distribución a domicilio</li>
+        <li><span><i class="fas fa-check-circle"></i></span> Retiro y entrega de emergencia</li>
+        <li><span><i class="fas fa-check-circle"></i></span> Transporte aéreo y terrestre</li>
+        <li><span><i class="fas fa-check-circle"></i></span> Soluciones personalizadas para cargas urgentes</li>
+        <li><span><i class="fas fa-check-circle"></i></span> Agentes en las principales ciudades del país</li>
+          </ul>
+          <div style="margin-top:36px;">
+            <a href="contacto.html" class="btn-primary">Solicitar información</a>
+          </div>
+        </div>
+        <div class="service-detail-img">
+          <img src="assets/images/DSC01941.jpg" alt="Cargas Nacionales" />
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="container cta-inner">
-      <p>¡Ponte en contacto con nosotros, somos expertos en nuestra área!</p>
-      <a href="contacto.html" class="btn-primary">Contáctanos</a>
+  <section class="call-to-action">
+    <div class="container">
+      <div class="cta-row">
+        <h2>¡Ponte en contacto con nosotros, somos expertos en nuestra área!</h2>
+        <a href="contacto.html" class="btn-border-light">Contáctanos</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/blancob2b.png" alt="B2B Express" />
-        <p>Tu agencia de envíos en Chile</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/b2bexpresscl" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/b2bexpresscl" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <h5>Servicios</h5>
-        <ul>
-          <li><a href="cargas-nacionales.html">Cargas Nacionales</a></li>
-          <li><a href="cargas-internacionales.html">Cargas Internacionales</a></li>
-          <li><a href="cargas-maritimas.html">Cargas Marítimas</a></li>
-          <li><a href="servicios-logisticos.html">Servicios Logísticos</a></li>
-          <li><a href="cargas-peligrosas.html">Cargas Peligrosas</a></li>
-          <li><a href="cargas-valoradas.html">Cargas Valoradas</a></li>
-          <li><a href="cargas-radioactivas.html">Cargas Radioactivas</a></li>
-          <li><a href="cajas-certificadas.html">Cajas Certificadas</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h5>Contacto</h5>
-        <p><i class="fas fa-map-marker-alt"></i> Colo Colo 521, Quilicura - Bodega 11</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+56996269600">+569 96269600</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:info@b2bx.cl">info@b2bx.cl</a></p>
+    <div class="subfooter">
+      <div class="container">
+        <p class="text-center">
+          <a href="mailto:contacto@b2bx.cl" class="footer-contact-link"><i class="fas fa-envelope"></i> contacto@b2bx.cl</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://wa.me/56996269600" target="_blank" rel="noopener" class="footer-contact-link footer-contact-link--wa"><i class="fab fa-whatsapp"></i> +569 96269600</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <span><i class="fas fa-map-marker-alt"></i> Colo Colo 521, Quilicura - Bodega 11</span>
+        </p>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2025 B2B Express. Todos los derechos reservados.</p></div>
   </footer>
 
+  <a id="back-to-top" href="#top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></a>
+  <a id="whatsapp-float" href="https://wa.me/56996269600" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

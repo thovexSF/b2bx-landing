@@ -127,20 +127,59 @@
   }
 
   /* -----------------------------------------------
-     CONTACT FORM (inner pages)
+     CONTACT FORM — Web3Forms
+     1. Ve a https://web3forms.com
+     2. Ingresa contacto@b2bx.cl → confirma el correo
+     3. Copia el Access Key y pégalo en contacto.html
+        en el campo: <input name="access_key" value="AQUI">
   ----------------------------------------------- */
-  const contactForm = document.getElementById('contactForm');
+  var contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const name    = (contactForm.querySelector('[name="nombre"]') || {}).value || '';
-      const email   = (contactForm.querySelector('[name="email"]') || {}).value || '';
-      const phone   = (contactForm.querySelector('[name="telefono"]') || {}).value || '';
-      const message = (contactForm.querySelector('[name="mensaje"]') || {}).value || '';
-      const subject = encodeURIComponent('Consulta de ' + name);
-      const body    = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\nTeléfono: ' + phone + '\n\nMensaje:\n' + message);
-      window.location.href = 'mailto:contacto@b2bx.cl?subject=' + subject + '&body=' + body;
+
+      var submitBtn = contactForm.querySelector('[type="submit"]');
+      var originalText = submitBtn.textContent;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando…';
+
+      var data = new FormData(contactForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          contactForm.innerHTML =
+            '<div class="cf-success">' +
+            '<i class="fas fa-check-circle"></i>' +
+            '<p>¡Mensaje enviado correctamente!<br>Te contactaremos a la brevedad.</p>' +
+            '</div>';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          showCfError(contactForm, 'Hubo un error al enviar. Inténtalo de nuevo.');
+        }
+      })
+      .catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        showCfError(contactForm, 'No se pudo conectar. Revisa tu conexión e inténtalo de nuevo.');
+      });
     });
+  }
+
+  function showCfError(form, msg) {
+    var existing = form.querySelector('.cf-error');
+    if (existing) existing.remove();
+    var el = document.createElement('p');
+    el.className = 'cf-error';
+    el.textContent = msg;
+    form.appendChild(el);
   }
 
 })();

@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="assets/images/naranjo.png" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nosotros – B2B Express</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -16,12 +19,14 @@
         <img src="assets/images/blancob2b.png" alt="B2B Express" id="logo-white" />
         <img src="assets/images/naranjo.png" alt="B2B Express" id="logo-orange" />
       </a>
-      <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
       <nav id="mainNav">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li class="has-dropdown"><a href="index.html#servicios">Servicios <i class="fas fa-chevron-down"></i></a>
+          <li class="has-dropdown">
+            <a href="servicios.html">Servicios <i class="fas fa-angle-down"></i></a>
             <ul class="dropdown">
+              <li><a href="servicios.html">Nuestros Servicios</a></li>
               <li><a href="cargas-nacionales.html">Cargas Nacionales</a></li>
               <li><a href="cargas-internacionales.html">Cargas Internacionales</a></li>
               <li><a href="cargas-maritimas.html">Cargas Marítimas</a></li>
@@ -33,119 +38,86 @@
             </ul>
           </li>
           <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="contacto.html" class="btn-contact">¡Contáctanos!</a></li>
+          <li><a href="contacto.html" class="nav-contacto">¡Contáctanos!</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="page-hero">
+  <div class="page-hero page-hero--dark" style="background-image: url('assets/images/bg-subheader-2.jpg');">
     <div class="container">
       <h1>Sobre Nosotros</h1>
-      <p>Conoce quiénes somos y qué nos hace diferentes</p>
+      <p>Conoce quiénes somos y por qué elegirnos</p>
     </div>
   </div>
 
-  <section class="page-content section">
-    <div class="container about-grid">
-      <div>
-        <span class="section-tag">Quiénes Somos</span>
-        <h2>Más de 25 años al servicio del comercio exterior</h2>
-        <p>
-          B2B Express nació el año 2000 con la intención de atender la creciente demanda del mercado
-          productor de metal Doré y otros valorados. En el año 2006 fue adquirida en su totalidad
-          por el inversionista Roberto Bellinghausen, ex ejecutivo de Lan Cargo, ampliando los servicios
-          hacia exportaciones de productos especiales.
-        </p>
-        <span class="section-tag mt">Qué Hacemos</span>
-        <p>
-          Nos especializamos en cargas valoradas y perecibles, transporte aéreo nacional e
-          internacional, carga marítima, mercancías peligrosas, courier y envíos radioactivos.
-          También fabricamos embalajes certificados para mercancías peligrosas.
-        </p>
-        <p>
-          En un mundo globalizado, gran parte del consumo económico está marcado por la disponibilidad
-          de los productos. La cadena de suministro es la que controla todo el flujo de trabajo,
-          y nosotros somos parte esencial de esa cadena.
-        </p>
-      </div>
-      <div>
-        <img src="assets/images/pic-2-2.jpg" alt="B2B Express operaciones" style="border-radius:8px;" />
-      </div>
-    </div>
-  </section>
-
-  <section class="why section">
+  <section class="section" style="background:#fff;">
     <div class="container">
-      <div class="section-header white">
-        <span class="section-tag">Nuestra diferencia</span>
-        <h2>¿Por qué elegirnos?</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <i class="fas fa-star"></i>
-          <h4>Clientes Satisfechos</h4>
-          <p>Cada cliente tiene un ejecutivo dedicado. La mayoría de nuestros clientes llegan por referidos.</p>
+      <div class="service-detail-grid">
+        <div class="service-detail-text">
+          <h2 style="margin-bottom:20px; color:var(--dark);">¿Por qué elegirnos?</h2>
+          <p style="font-style:italic; color:var(--orange); font-size:16px; margin-bottom:24px;">Encuentra razones para ser tus agentes de carga</p>
+          <p>Somos una empresa con más de 25 años de experiencia en la industria de la carga, especializada en dar soluciones logísticas integrales para empresas que necesitan mover sus productos dentro y fuera de Chile.</p>
+          <p>Nuestro tamaño nos permite ser ágiles y adaptarnos rápidamente a las necesidades urgentes de nuestros clientes. En general todos nuestros clientes llegan a nosotros por referencia directa de otro cliente.</p>
         </div>
-        <div class="why-item">
-          <i class="fas fa-award"></i>
-          <h4>Experiencia</h4>
-          <p>Más de 25 años en la industria del cargo con oficinas dentro del aeropuerto.</p>
-        </div>
-        <div class="why-item">
-          <i class="fas fa-users"></i>
-          <h4>Equipo Profesional</h4>
-          <p>Ejecutivos de operaciones que trabajan directamente con los clientes en todos los procesos.</p>
-        </div>
-        <div class="why-item">
-          <i class="fas fa-handshake"></i>
-          <h4>Conocimiento y Seriedad</h4>
-          <p>Asesoramos en el cumplimiento de regulaciones internacionales aéreas y marítimas.</p>
+        <div class="service-detail-img">
+          <img src="assets/images/cambionnaranjo.jpg" alt="B2B Express" />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="container cta-inner">
-      <p>¡Ponte en contacto con nosotros, somos expertos en nuestra área!</p>
-      <a href="contacto.html" class="btn-primary">Contáctanos</a>
+  <section class="section" style="background:#f5f5f5;">
+    <div class="container">
+      <div class="nosotros-cards">
+        <div class="nosotros-card">
+          <div class="nosotros-icon"><i class="fas fa-users"></i></div>
+          <h3>Clientes Satisfechos</h3>
+          <p>Nuestro compromiso es apoyar al máximo al cliente en todo su proceso de Comex. Cada cliente tiene un ejecutivo asignado con el cual coordina todos los aspectos de sus embarques.</p>
+        </div>
+        <div class="nosotros-card">
+          <div class="nosotros-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Excelente Equipo de Profesionales</h3>
+          <p>Todos nuestros Ejecutivos de Operaciones trabajan directamente con nuestros clientes. Nuestro equipo está integrado por profesionales expertos en su área que desempeñan sus tareas con eficiencia y seriedad.</p>
+        </div>
+        <div class="nosotros-card">
+          <div class="nosotros-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Conocimiento y Seriedad</h3>
+          <p>Generamos valor agregado a sus procesos de exportación, dándoles la asesoría y seguridad que requiere para cumplir con todas las normas internacionales de carga aérea y marítima.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff; padding:0;">
+    <img src="assets/images/pic-2-2.jpg" alt="Equipo B2B Express" style="width:100%; max-height:460px; object-fit:cover; display:block;" />
+  </section>
+
+  <section class="call-to-action">
+    <div class="container">
+      <div class="cta-row">
+        <h2>¡Ponte en contacto con nosotros, somos expertos en nuestra área!</h2>
+        <a href="contacto.html" class="btn-border-light">Contáctanos</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/blancob2b.png" alt="B2B Express" />
-        <p>Tu agencia de envíos en Chile</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/b2bexpresscl" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/b2bexpresscl" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <h5>Servicios</h5>
-        <ul>
-          <li><a href="cargas-nacionales.html">Cargas Nacionales</a></li>
-          <li><a href="cargas-internacionales.html">Cargas Internacionales</a></li>
-          <li><a href="cargas-maritimas.html">Cargas Marítimas</a></li>
-          <li><a href="servicios-logisticos.html">Servicios Logísticos</a></li>
-          <li><a href="cargas-peligrosas.html">Cargas Peligrosas</a></li>
-          <li><a href="cargas-valoradas.html">Cargas Valoradas</a></li>
-          <li><a href="cargas-radioactivas.html">Cargas Radioactivas</a></li>
-          <li><a href="cajas-certificadas.html">Cajas Certificadas</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h5>Contacto</h5>
-        <p><i class="fas fa-map-marker-alt"></i> Colo Colo 521, Quilicura - Bodega 11</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+56996269600">+569 96269600</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:info@b2bx.cl">info@b2bx.cl</a></p>
+    <div class="subfooter">
+      <div class="container">
+        <p class="text-center">
+          <a href="mailto:contacto@b2bx.cl" class="footer-contact-link"><i class="fas fa-envelope"></i> contacto@b2bx.cl</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://wa.me/56996269600" target="_blank" rel="noopener" class="footer-contact-link footer-contact-link--wa"><i class="fab fa-whatsapp"></i> +569 96269600</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <span><i class="fas fa-map-marker-alt"></i> Colo Colo 521, Quilicura - Bodega 11</span>
+        </p>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2025 B2B Express. Todos los derechos reservados.</p></div>
   </footer>
 
+  <a id="back-to-top" href="#top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></a>
+  <a id="whatsapp-float" href="https://wa.me/56996269600" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
