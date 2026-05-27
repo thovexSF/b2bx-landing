@@ -167,15 +167,15 @@ h3 { font-size: 1.25rem; }
   padding: 14px 0;
 }
 
-.logo { display: flex; align-items: center; height: 55px; }
-.logo img { height: 50px; width: auto; }
+.logo { display: flex; align-items: center; height: 70px; }
+.logo img { height: 65px; width: auto; }
 
 #logo-orange { display: none; }
 #header.scrolled #logo-white { display: none; }
 #header.scrolled #logo-orange { display: block; }
 
 /* NAV */
-#mainNav ul {
+#mainNav > ul {
   display: flex;
   align-items: center;
   gap: 0;
@@ -260,7 +260,7 @@ h3 { font-size: 1.25rem; }
 =========================== */
 .hero {
   min-height: 100vh;
-  background: url('../images/b2bexpress-fondonegrochico.jpg') center/cover no-repeat;
+  background: url('../images/b2bexpress-fondonegrochico.jpg') center 20%/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,7 +271,7 @@ h3 { font-size: 1.25rem; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.50);
+  background: rgba(0,0,0,0.22);
 }
 
 .hero-content {
@@ -284,20 +284,28 @@ h3 { font-size: 1.25rem; }
 
 .sub-intro-text {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   font-weight: normal;
-  color: var(--white);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 0;
   letter-spacing: 0;
 }
+.sub-intro-text::before,
+.sub-intro-text::after {
+  content: ' — ';
+  color: var(--orange);
+  font-style: normal;
+}
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.1;
   margin: 0;
   font-family: 'Montserrat', var(--font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .id-color { color: var(--orange); }
@@ -306,15 +314,15 @@ h3 { font-size: 1.25rem; }
 .typed-strings { display: none; }
 
 .hero-typed-wrap {
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-weight: 600;
   font-family: 'Montserrat', var(--font);
   color: var(--white);
   min-height: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin: 4px 0;
 }
 
@@ -334,7 +342,7 @@ h3 { font-size: 1.25rem; }
   display: inline-block;
   background: var(--orange);
   color: var(--white);
-  padding: 14px 40px;
+  padding: 10px 28px;
   border-radius: 3px;
   font-weight: 700;
   font-size: 14px;
@@ -802,7 +810,7 @@ footer {
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   }
   #mainNav.open { display: block; }
-  #mainNav ul { flex-direction: column; gap: 2px; }
+  #mainNav > ul { flex-direction: column; gap: 2px; }
   #mainNav ul li a { color: var(--dark) !important; font-size: 14px; }
   .dropdown {
     position: static;

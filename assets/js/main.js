@@ -139,7 +139,7 @@
       const message = (contactForm.querySelector('[name="mensaje"]') || {}).value || '';
       const subject = encodeURIComponent('Consulta de ' + name);
       const body    = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\nTeléfono: ' + phone + '\n\nMensaje:\n' + message);
-      window.location.href = 'mailto:info@b2bx.cl?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:contacto@b2bx.cl?subject=' + subject + '&body=' + body;
     });
   }
 
