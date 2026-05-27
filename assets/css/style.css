@@ -112,6 +112,36 @@ h3 { font-size: 1.25rem; }
 .social-bar li a:hover { color: var(--orange); }
 #header.scrolled .social-bar li a { color: #aaa; }
 
+/* Links de contacto en top bar */
+.top-contact-link {
+  color: rgba(255,255,255,0.8);
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.top-contact-link:hover { color: var(--orange); }
+.top-contact-link--wa:hover { color: #25D366; }
+.top-contact-link i { font-size: 12px; }
+
+#header.scrolled .top-contact-link { color: #777; }
+#header.scrolled .top-contact-link:hover { color: var(--orange); }
+#header.scrolled .top-contact-link--wa:hover { color: #25D366; }
+
+/* Links de contacto en footer */
+.footer-contact-link {
+  color: #999;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-contact-link:hover { color: var(--orange); }
+.footer-contact-link--wa:hover { color: #25D366; }
+.footer-contact-link i { font-size: 13px; }
+.subfooter span { color: #999; display: inline-flex; align-items: center; gap: 5px; }
+.subfooter span i { color: var(--orange); font-size: 12px; }
+
 /* ===========================
    HEADER
 =========================== */
