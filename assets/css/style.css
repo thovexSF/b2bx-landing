@@ -75,21 +75,27 @@ h3 { font-size: 1.25rem; }
 /* ===========================
    TOP BAR
 =========================== */
+/* Top bar — vive DENTRO del header, hereda transparencia */
 .top-bar {
-  background: #f5f5f5;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
   padding: 7px 0;
   font-size: 12px;
-  color: #777;
 }
 .top-bar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.top-bar p { margin: 0; color: #777; }
-.top-bar a { color: #777; }
+.top-bar p { margin: 0; color: rgba(255,255,255,0.8); }
+.top-bar a { color: rgba(255,255,255,0.8); }
 .top-bar a:hover { color: var(--orange); }
+
+/* Colores del top-bar cuando el header es blanco (scrolled) */
+#header.scrolled .top-bar {
+  border-bottom: 1px solid #e8e8e8;
+}
+#header.scrolled .top-bar p,
+#header.scrolled .top-bar a { color: #777; }
 
 .social-bar {
   display: flex;
@@ -97,31 +103,30 @@ h3 { font-size: 1.25rem; }
   align-items: center;
 }
 .social-bar li a {
-  color: #aaa;
+  color: rgba(255,255,255,0.7);
   font-size: 13px;
   transition: color 0.2s;
   display: inline-block;
   line-height: 1;
 }
 .social-bar li a:hover { color: var(--orange); }
+#header.scrolled .social-bar li a { color: #aaa; }
 
 /* ===========================
    HEADER
 =========================== */
 #header {
   position: fixed;
-  top: 34px;
+  top: 0;
   left: 0; right: 0;
   z-index: 1000;
-  transition: background 0.3s, box-shadow 0.3s, top 0.3s, padding 0.3s;
-  padding: 18px 0;
+  /* transparente por defecto — hero se ve a través */
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 #header.scrolled {
   background: var(--white);
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
-  top: 0;
-  padding: 10px 0;
 }
 
 .header-inner {
@@ -129,6 +134,7 @@ h3 { font-size: 1.25rem; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  padding: 14px 0;
 }
 
 .logo { display: flex; align-items: center; height: 55px; }
@@ -753,7 +759,6 @@ footer {
   .section { padding: 60px 0; }
 
   .top-bar { display: none; }
-  #header { top: 0; }
 
   .nav-toggle { display: flex; }
 
